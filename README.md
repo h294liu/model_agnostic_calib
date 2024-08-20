@@ -1,6 +1,6 @@
 # Hydrologic Model-Agnostic Calibration Framework
 
-This repository contains scripts designed to develop a hydrologic model-agnostic calibration framework. The framework supports the calibration of three distinct hydrologic models: **GR4J**, **HYPE**, **MESH**, and **SUMMA**. The calibration process is driven by the **Ostrich** optimization software toolkit.
+This repository contains scripts designed to develop a hydrologic model-agnostic calibration framework. The framework supports the calibration of four distinct hydrologic models: **GR4J**, **HYPE**, **MESH**, and **SUMMA**. The calibration process is driven by the **Ostrich** optimization software toolkit.
 
 ## Overview
 
