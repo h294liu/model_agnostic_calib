@@ -1,0 +1,1 @@
+These files contain observed daily streamflow data from three Canadian gauging stations. The data is sourced from the [HYDAT Database](https://wateroffice.ec.gc.ca/mainmenu/historical_data_index_e.html) and has been prepared by Dr. Rodolfo Montero.
