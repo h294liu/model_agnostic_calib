@@ -19,8 +19,28 @@
 
 - **Calibration Tool:** Ostrich
 
-- **Objective Function:** Modified Kling-Gupta Efficiency (KGE)  
-  - *Reference:* Kling, Harald, Martin Fuchs, and Maria Paulin. “Runoff conditions in the upper Danube basin under an ensemble of climate change scenarios.” *Journal of Hydrology* 424 (2012): 264-277.
+- **Objective Function:** Modified Kling-Gupta Efficiency (KGE)
+  - Modified KGE is expressed as:
+
+    $$
+    KGE' = 1 - \sqrt{(r - 1)^2 + (\beta - 1)^2 + (\gamma - 1)^2}
+    $$
+
+    $$
+    \beta = \frac{\mu_{\text{sim}}}{\mu_{\text{obs}}}
+    $$
+
+    $$
+    \gamma = \frac{CV_{\text{sim}}}{CV_{\text{obs}}} = \frac{{\sigma_{\text{sim}}}/{\mu_{\text{sim}}}}{{\sigma_{\text{obs}}}/{\mu_{\text{obs}}}}
+    $$
+
+    - r is the Pearson correlation coefficient.
+    - β (beta) is the bias ratio.
+    - γ (gamma) is the variability ratio.
+
+  - The range of \( KGE' \) is \([-\infty, 1]\). \( KGE' = 1 \) indicates perfect agreement between the simulated and observed data.
+
+  - Reference: Kling, Harald, Martin Fuchs, and Maria Paulin. “Runoff conditions in the upper Danube basin under an ensemble of climate change scenarios.” *Journal of Hydrology* 424 (2012): 264-277.
 
 - **Observation:** Daily streamflow downloaded from [HYDAT Database](https://wateroffice.ec.gc.ca/mainmenu/historical_data_index_e.html)
   - Example streafmlow data are located in `examples/obs` of this repository.
