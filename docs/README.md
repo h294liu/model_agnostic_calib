@@ -38,7 +38,7 @@
     - β (beta) is the bias ratio.
     - γ (gamma) is the variability ratio.
 
-  - The range of \( KGE' \) is \([-\infty, 1]\). \( KGE' = 1 \) indicates perfect agreement between the simulated and observed data.
+  - The range of KGE' is \([-∞, 1]\). A KGE' value of 1 indicates perfect agreement between the simulated and observed data.
 
   - Reference: Kling, Harald, Martin Fuchs, and Maria Paulin. “Runoff conditions in the upper Danube basin under an ensemble of climate change scenarios.” *Journal of Hydrology* 424 (2012): 264-277.
 
