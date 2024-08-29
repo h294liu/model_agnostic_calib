@@ -6,9 +6,9 @@ import warnings
 import shutil
 
 
-# create the ostin setup to be run directly
+# create the ostin setup (folder structure)
 def initialize_ostin_setup(hype_inputs_path, output_path):
-    # create the common_inputs dir (contains all common inputs such as input files, validation files, etc.)
+    # create the common_inputs directory, which contains all common inputs such as input files, validation files, etc.)
     if not os.path.isdir(os.path.join(output_path,'common_inputs')):
         os.makedirs(os.path.join(output_path,'common_inputs'))
     # create the ost directory    
@@ -64,7 +64,7 @@ Number of areas in mean/median criterion:   -9999.00000
 
 # get the number of instances for each parameter (based on number of landcover types, soil types, ilregion, etc.)
 def get_param_instances(hype_inputs_path):
-    # initialie dictionary
+    # initialize dictionary
     param_instances = {}
     # read the GeoClass file
     GeoClass = pd.read_csv(os.path.join(hype_inputs_path,'GeoClass.txt'), sep='\t', comment='!', header=None)
@@ -77,7 +77,8 @@ def get_param_instances(hype_inputs_path):
         warnings.warn("Warning...........Message")
         print('This HYPE setup contains special classes. \n',
             'These classes require special treatment in the calibration. \n',
-            'Make sure to check the optimization setup')
+            'The current code does not account for that. \n'
+            'Make sure to check and fix the optimization setup')
 
     #########
     # read the GeoData file
@@ -99,14 +100,11 @@ def get_param_instances(hype_inputs_path):
 ########################################################
 ########################################################
 
-# read the mimax parameter range
+# read the parameters range file
 def read_HYPE_MinMaxParaRange(minmaxParamFile, hype_inputs_path):
-    # read the parameters from the text file
-
+    
     # initialize hype parameter range dataframe
     hype_param_range = pd.DataFrame([])
-    # # Initialize an empty dictionary to store the parameter values
-    # parameter_values = {}
 
     # get the number of instances for each parameter to link to the dataframe
     nparam_instances = get_param_instances(hype_inputs_path)
@@ -146,7 +144,7 @@ def read_HYPE_MinMaxParaRange(minmaxParamFile, hype_inputs_path):
 ########################################################
 
 def write_ostin_tpl_files(hype_inputs_path, output_path, hype_exe_path, param_range, optimization_param):
-    # write the ostin file 
+    # write the ostin.txt file 
     # create the parameters name to be fed to the ostin
     ostin_param = pd.DataFrame(columns=['name', 'initVal',	'min', 'max', 'transformations1', 'transformations2', 'transformations3', 'format'])
     # create the parameter section of the ostin file
@@ -256,8 +254,8 @@ EndGCOP"""
                     }
                 
                 # Manually create a single tab-delimited string
-                data_str = '\t'.join(pd.DataFrame(data_to_append).values.flatten()) + '\n' #pd.DataFrame(data_to_append).to_csv(sep='\t', index=False, header=None).strip()
-                # print(data_str)
+                data_str = '\t'.join(pd.DataFrame(data_to_append).values.flatten()) + '\n' 
+                
                 # Replace the line starting with the par_name with the DataFrame content
                 lines = [data_str if line.startswith(f"{par_name}\t") else line for line in lines]
 

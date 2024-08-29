@@ -14,6 +14,7 @@ epotdist    |	2	    |   6	    |   general 	| Coefficient for potential evaporati
 #-------------------------landcover dependent parameters--------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------------------------------------
 ttmp 	    |   -3	    |   3	    |   landcover	| Temperature threshold for snowmelt calculations  [ °C ]
+cevp        |	0.1	    |   0.8	    |   landcover	| Evapotranspiration parameter [mm/degC/day]
 kc  	    |   0.4	    |   1.3	    |   landcover	| Crop coefficient for evapotranspiration calculations [ - ]
 alb 	    |   0.1	    |   0.5	    |   landcover	| Snow albedo  [ - ]
 cmlt 	    |   1	    |   10	    |   landcover	| Melt factor for snowmelt calculations  [ mm/°C/day ]
