@@ -1,0 +1,49 @@
+# HYPE parameter range
+# this is based on the work of Ahmed et al. (2023; DOI: 10.1016/j.jhydrol.2023.129820), table S1 therein.
+# list parameters range
+# Name	    |    min	|    max	|    dependency	| description [units]
+#---------------------------------------------------------------------------------------------------------------------------------
+#-------------------global (general/spatially constant) parameters----------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------------------
+rivvel 	    |   0.1	    |   10	    |   general 	| Water celerity in river  [ m/s ]
+damp 	    |   0.1	    |   0.9	    |   general 	| Delay and damping coefficient of water  [ - ]
+rrcs3 	    |   0	    |   0.1	    |   general 	| Slope dependent recession coefficient for the first soil layer  [ 1/day/% ]
+lp 	        |   0.5	    |   1	    |   general 	| Limiting factor for potential evaporation from soil column  [ - ]
+epotdist    |	2	    |   6	    |   general 	| Coefficient for potential evaporation depth dependency function  [ 1/m ]
+#---------------------------------------------------------------------------------------------------------------------------------
+#-------------------------landcover dependent parameters--------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------------------
+ttmp 	    |   -3	    |   3	    |   landcover	| Temperature threshold for snowmelt calculations  [ °C ]
+kc  	    |   0.4	    |   1.3	    |   landcover	| Crop coefficient for evapotranspiration calculations [ - ]
+alb 	    |   0.1	    |   0.5	    |   landcover	| Snow albedo  [ - ]
+cmlt 	    |   1	    |   10	    |   landcover	| Melt factor for snowmelt calculations  [ mm/°C/day ]
+srrcs 	    |   0.01	|   0.2	    |   landcover	| Surface runoff recession coefficient   [ - ]
+#---------------------------------------------------------------------------------------------------------------------------------
+#-------------------------soil dependent parameters-------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------------------
+rrcs1 	    |   0.05	|   0.6	    |   soil 	    | Recession coefficient for first soil layer  [ 1/day ]
+rrcs2 	    |   0.001	|   0.2	    |   soil 	    | Recession coefficient for third soil layer  [ 1/day ]
+mperc1 	    |   5	    |   120	    |   soil 	    | Percolation capacity from soil layer 1 to soil layer 2  [ mm/day ]
+mperc2 	    |   5	    |   120	    |   soil 	    | Percolation capacity from soil layer 2 to soil layer 3  [ mm/day ]
+srrate 	    |   0.05	|   0.5	    |   soil 	    | Surface runoff fraction  [ - ]
+wcfc1 	    |   0.05	|   0.5	    |   soil 	    | Field capacity for soil layer 1 (fraction)  [ - ]
+wcfc2 	    |   0.05	|   0.5	    |   soil 	    | Field capacity for soil layer 2 (fraction)  [ - ]
+wcfc3 	    |   0.05	|   0.5	    |   soil 	    | Field capacity for soil layer 3 (fraction)  [ - ]
+wcwp1 	    |   0.01	|   0.5	    |   soil 	    | Wilting point for soil layer 1 (fraction)  [ - ]
+wcwp2 	    |   0.01	|   0.5	    |   soil 	    | Wilting point for soil layer 2 (fraction)  [ - ]
+wcwp3 	    |   0.01	|   0.5	    |   soil 	    | Wilting point for soil layer 3 (fraction)  [ - ]
+wcep1 	    |   0.01	|   0.9	    |   soil 	    | Effective porosity for soil layer 1 (fraction)  [ - ]
+wcep2 	    |   0.01	|   0.9	    |   soil 	    | Effective porosity for soil layer 2 (fraction)  [ - ]
+wcep3 	    |   0.01	|   0.9	    |   soil 	    | Effective porosity for soil layer 3 (fraction)  [ - ]
+bfroznsoil  |	1	    |   5	    |   soil 	    | Frozen soil infiltration coefficient  [ - ]
+bcosby 	    |   1	    |   20	    |   soil 	    | Unfrozen soil coefficient  [ - ]
+#---------------------------------------------------------------------------------------------------------------------------------
+#-------------------------special classes parameters------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------------------
+ilratk 	    |   50	    |   100	    |   ilregion    | Rating curve coefficient for internal lakes (ilake)  [ - ]
+ilratp 	    |   1	    |   5	    |   ilregion    | Rating curve exponent for internal lakes (ilake)  [ - ]
+ilicatch 	|   0.1	    |   0.9	    |   ilregion    | Fraction of runoff that passes through the lake  [ - ]
+ildepth 	|   0.1	    |   5	    |   ilregion    | ilake depth  [ m ]
+olratp 	    |   1	    |   5	    |   olregion    | Rating curve exponent for outlet lakes (olake)  [ - ]
+olratk 	    |   50	    |   100	    |   olregion    | Rating curve coefficient for outlet lakes (olake)  [ - ]
+oldepth 	|   0.5	    |   15	    |   olregion    | olake depth  [ m ]
