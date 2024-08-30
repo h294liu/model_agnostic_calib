@@ -257,7 +257,7 @@ EndGCOP"""
                 data_str = '\t'.join(pd.DataFrame(data_to_append).values.flatten()) + '\n' 
                 
                 # Replace the line starting with the par_name with the DataFrame content
-                lines = [data_str if line.startswith(f"{par_name}\t") else line for line in lines]
+                lines = [data_str if line.startswith(f"{par_name}\t") or line.startswith(f"{par_name} ") else line for line in lines]
 
     with open(os.path.join(output_path,'ost','par.tpl'), 'w') as file:
         file.writelines(lines)
