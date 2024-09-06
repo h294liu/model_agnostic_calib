@@ -12,10 +12,10 @@
 
 ### Calibration Configurations
 
-- **Modeling Period:** Oct 1, 2008 – Sept 30, 2018  
-  - 1-year warm-up: Oct 1, 2008 – Sept 30, 2009
-  - 5-year calibration: Oct 1, 2009 – Sept 30, 2014
-  - 4-year validation: Oct 1, 2014 – Sept 30, 2018
+- **Modeling Period:** Oct 1, 2007 – Sept 30, 2018  
+  - 1-year warm-up: Oct 1, 2007 – Sept 30, 2008
+  - 5-year calibration: Oct 1, 2008 – Sept 30, 2013
+  - 5-year validation: Oct 1, 2013 – Sept 30, 2018
 
 - **Calibration Tool:** Ostrich
 
