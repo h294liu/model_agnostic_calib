@@ -169,8 +169,8 @@ EXE_NAME_MIZUROUTE: mizuroute.exe                              # Name of mizurou
 OSTRICH_PATH: /Users/darrieythorsson/compHydro/code/CWARHM/7_model_optimization/ostrich  # Path to ostrich executable 
 OSTRICH_EXE: OstrichMPI                                                # Name of Ostrich executable
 OSTRICH_ALGORITHM: ParaPADDS                                           # Options: DDS, ParallelDDS, PSO, APPSO, SCE, ParaPADDS
-OSTRICH_METRICS:  GCOP                                                 # Options: GCOP (single-objective), PATO (multi-objective)
-OSTRICH_OUTPUT_FILE:           ostrich_output.txt                      # Name of OSTRICH output file
+OSTRICH_METRICS: GCOP                                                  # Options: GCOP (single-objective), PATO (multi-objective)
+OSTRICH_OUTPUT_FILE: ostrich_output.txt                                # Name of OSTRICH output file
 DDS_R:  0.2                                                            # DDS perturbation parameter
 SCE_BUDGET: 10000                                                      # SCE budget
 SCE_LOOP_STAGNATION: 5                                                 # SCE loop stagnation criteria
@@ -182,21 +182,22 @@ SCE_POINTS_PER_SUBCOMPLEX: 10                                          # SCE poi
 SCE_NUM_EVOLUTION_STEPS: 19                                            # SCE number of evolution steps
 SCE_MIN_COMPLEXES: 3                                                   # SCE minimum number of complexes
 SCE_USE_INITIAL_POINT: no                                              # SCE use initial point
-pso_swarm_size               | 20                                      # PSO swarm size
-pso_num_generations          | 50                                      # PSO number of generations
-pso_constriction_factor      | 1.00                                    # PSO constriction factor
-pso_cognitive_param          | 2.00                                    # PSO cognitive parameter
-pso_social_param             | 2.00                                    # PSO social parameter
-pso_inertia_weight           | 1.20                                    # PSO inertia weight
-pso_inertia_reduction_rate   | 0.10                                    # PSO inertia reduction rate
-pso_init_population_method   | Random                                  # PSO initial population method
-pso_convergence_val          | 1.00E-4                                 # PSO convergence value
+PSO_SWARM_SIZE: 20                                                     # PSO swarm size
+PSO_NUM_GENERATIONS: 50                                                # PSO number of generations
+PSO_CONSTRICTION_FACTOR: 1.00                                          # PSO constriction factor
+PSO_COGNITIVE_PARAM: 2.00                                              # PSO cognitive parameter
+PSO_SOCIAL_PARAM: 2.00                                                 # PSO social parameter
+PSO_INERTIA_WEIGHT: 1.20                                               # PSO inertia weight
+PSO_INERTIA_REDUCTION_RATE: 0.10                                       # PSO inertia reduction rate
+PSO_INIT_POPULATION_METHOD: Random                                     # PSO initial population method
+PSO_CONVERGENCE_VAL: 1.00E-4                                           # PSO convergence value
 
 # Optimization settings general
-OPTMIZATION_ALOGORITHM: SMS-EMOA    		    	                         # Options are: Differential Evolution: "DE", Particle Swarm: "PSO", Shuffled Complex Evolution: "SCE-UA", Basin-hopping" "Basin-hopping", Dynamically Dimensioned Search "DDS", or NSGA-II or NSGA-III or Borg-MOEA or SMS-EMOA or MOEA/D or MOPSO, OSTRICH
-OPTIMIZATION_METRIC: KGE  					                                   # Options: Root mean square error : "RMSE", Nash-Suthcliffe efficiency: "NSE", Kling-Gupta Efficiency: "KGE", KGE projected: "KGEp", Mean absolute error: "MAE"
+OPTMIZATION_ALOGORITHM: SMS-EMOA                                       # Options are: Differential Evolution: "DE", Particle Swarm: "PSO", Shuffled Complex Evolution: "SCE-UA", Basin-hopping" "Basin-hopping", Dynamically Dimensioned Search "DDS", or NSGA-II or NSGA-III or Borg-MOEA or SMS-EMOA or MOEA/D or MOPSO, OSTRICH
+OPTIMIZATION_METRIC: KGE                                               # Options: Root mean square error : "RMSE", Nash-Suthcliffe efficiency: "NSE", Kling-Gupta Efficiency: "KGE", KGE projected: "KGEp", Mean absolute error: "MAE"
 MOO_OPTIMIZATION_METRICS: KGE,NSE                                      # Optimisation metrics to use in multi objective optimisation
-OPTIMIZATION_RESULTS_FILE: default          			                  	 # If 'default', uses 'root_path/domain_[name]/settings/SUMMA/basinParamInfo.txt'
+OPTIMIZATION_RESULTS_FILE: default                                     # If 'default', uses 'root_path/domain_[name]/settings/SUMMA/basinParamInfo.txt'
 CALIBRATION_PERIOD: 2011-06-01, 2011-07-31                             # start_date, end_date in format YYYY-MM-DD
 EVALUATION_PERIOD:  2011-08-01, 2011-12-31                             # start_date, end_date in format YYYY-MM-DD
 ITERATION_RESULTS_FILE: default
+
